@@ -6,16 +6,19 @@
                   requireBase: false
               });
 
-              $stateProvider
-                  .state('home', {
-                      url: '/',
-                      controller: 'HomeCtrl as home',
-                      templateUrl: '/templates/home.html'
+          $stateProvider
+              .state('home', {
+                  url: '/',
+                  controller: 'HomeCtrl as home',
+                  templateUrl: '/templates/home.html'
+                })
+              .state('modal', {
+                    url: '/modal',
+                    controller: 'ModalCtrl as modal',
+                    templateUrl: '/templates/modal.html'
                   });
-      }
-
-
-      angular
-          .module('blocChat', ['ui.router', 'firebase'])
-          .config(config);
+          }
+            angular
+              .module('blocChat', ['ui.router', 'firebase', 'ui.bootstrap'])
+              .config(config);
 })();
