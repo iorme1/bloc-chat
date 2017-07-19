@@ -1,9 +1,8 @@
 (function() {
-    function HomeCtrl(Room, $scope, $uibModal) {
-      
-      this.openChatRoom = function() {
-          //do something to change room names
+    function HomeCtrl(Room, Message, $scope, $uibModal) {
 
+      this.openChatRoom = function(roomValue) {
+          this.roomId = roomValue;
       };
       this.chatRooms = Room;
       this.openModal = function() {
@@ -17,5 +16,5 @@
 
     angular
         .module('blocChat')
-        .controller('HomeCtrl', ['Room', '$scope', '$uibModal', HomeCtrl]);
+        .controller('HomeCtrl', ['Room', 'Message', '$scope', '$uibModal', HomeCtrl]);
 })();
