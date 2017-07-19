@@ -1,7 +1,11 @@
 .nav, .pagination, .carousel, .panel-title a {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .home {
-  margin-left: 15px;
+    height: 100%;
+    float: left;
+    background-color: lightgrey;
+    padding: 20px;
+    margin-right: 20px;
 };

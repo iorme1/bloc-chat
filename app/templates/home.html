@@ -1,7 +1,13 @@
 <section class="home">
   <h1>Bloc Chat</h1>
-  <button class="newRoom" ng-click="home.openModal()">New Room</button>
+  <button class="newRoom" ng-click="home.openModal()" style="color:blue">New Room</button>
   <div class="mainRooms" ng-repeat="room in home.chatRooms.all">
-      <h2 class="rooms">{{room.$value}}</h2>
+      <h4 class="rooms" ng-click="openChatRoom()">{{room.$value}}</h4>
   </div>
+</section>
+<section class="currentChatRoom">
+  <h2 style="text-align: center">currentRoom</h2>
+    <ul style="list-style-type: none">
+        <li style="background-color: lightblue">username :  message<span style="float: right; padding-right: 15px">current time</span></li>
+    </ul>
 </section>
