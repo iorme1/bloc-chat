@@ -1,8 +1,10 @@
 (function() {
     function HomeCtrl(Room, Message, $scope, $uibModal) {
 
-      this.openChatRoom = function(roomValue) {
-          this.roomId = roomValue;
+      this.messages = Message;
+      this.openChatRoom = function(roomValue, roomId) {
+          Message.setRoom(roomId);
+          this.roomName = roomValue; // sets room name
       };
       this.chatRooms = Room;
       this.openModal = function() {

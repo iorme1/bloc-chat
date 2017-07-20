@@ -2,16 +2,20 @@
     function Message($firebaseArray) {
       var Message = {};
       var refM = firebase.database().ref().child("messages");
-      var messages = $firebaseArray(refM);
 
-      Message.all = messages;
+      Message.all = $firebaseArray(refM);
 
       Message.add = function(message) {
-          return messages.content.$add(message);
+          return messages.$add({
+            content: message,
+            username: 'Isaac',
+            roomId: 'room1',
+            sentAt: '12345'
+          });
       };
-
-      Message.getByRoomId = function(roomId) {
-          refM.orderByChild(roomId).equalTo('roomId');
+      Message.setRoom = function(roomId) {
+        var newRef = firebase.database().ref().child("messages").orderByChild('roomId').equalTo(roomId);
+        Message.all = $firebaseArray(newRef);
       };
 
       return Message;

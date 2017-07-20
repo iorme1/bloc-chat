@@ -2,16 +2,16 @@
   <h1>Bloc Chat</h1>
   <button class="newRoom" ng-click="home.openModal()" style="color:blue">New Room</button>
   <div class="mainRooms" ng-repeat="room in home.chatRooms.all">
-      <h4 class="rooms" ng-click="home.openChatRoom(room.$value)">{{room.$value}}</h4>
+      <h4 class="rooms" ng-click="home.openChatRoom(room.$value, room.$id)">{{room.$value}}</h4>
   </div>
 </section>
-<section class="currentChatRoom">
-    <h2 style="text-align: center">{{home.roomId}}</h2>
-        <ul style="list-style-type: none">
-            <li style="background-color: lightblue">username : {{message.content}}<span style="float: right; padding-right: 15px">current time</span></li>
-        </ul>
+<section class="ChatRoom">
+    <h2 style="text-align: center; background: lightgrey">{{home.roomName}}</h2>
+    <div class="currentChatRoom" ng-repeat="message in home.messages.all">
+  <p style="background: lightblue;">{{message.username}} : {{message.content}}</p>
+    </div>
 </section>
 <section class="sendMessage">
-    <input type="text" ng-model="message.content"/>
-    <button ng-click="home.Message.add(message.content)">Send</button>
+    <input type="text" ng-model="value"/>
+    <button ng-click="home.messages.add(value)">Send</button>
 </section>
