@@ -3,10 +3,10 @@
       var Message = {};
       var refM = firebase.database().ref().child("messages");
 
-      Message.all = $firebaseArray(refM);
+      // Message.all = $firebaseArray(refM);
 
       Message.add = function(message) {
-          return messages.$add({
+          return Message.all.$add({
             content: message,
             username: 'Isaac',
             roomId: 'room1',

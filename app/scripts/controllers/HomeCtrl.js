@@ -18,5 +18,5 @@
 
     angular
         .module('blocChat')
-        .controller('HomeCtrl', ['Room', 'Message', '$scope', '$uibModal', HomeCtrl]);
+        .controller('HomeCtrl', ['Room', 'Message', 'Username', '$scope', '$uibModal', HomeCtrl]);
 })();
