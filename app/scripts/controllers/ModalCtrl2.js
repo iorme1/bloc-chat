@@ -1,8 +1,7 @@
 (function() {
-    function ModalCtrl2($uibModalInstance, $cookies, Username) {
+    function ModalCtrl2($uibModalInstance, $cookies) {
 
         this.closeModalSuccess = function() {
-          Username.add(this.userName);
           $cookies.put('username', this.userName);
           $uibModalInstance.close();
         }
@@ -10,5 +9,5 @@
 
     angular
         .module('blocChat')
-        .controller('ModalCtrl2', ['$uibModalInstance', '$cookies', 'Username', ModalCtrl2])
+        .controller('ModalCtrl2', ['$uibModalInstance', '$cookies', ModalCtrl2])
 })();
