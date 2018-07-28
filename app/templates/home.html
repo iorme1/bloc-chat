@@ -1,4 +1,4 @@
-<div class="container bloc-chat-container">
+<div class="container-fluid bloc-chat-container">
   <div class="row">
 
     <div class="col-md-4">
@@ -15,7 +15,7 @@
       <section class="chatroom">
           <h1 class="font-italic chat-room-title">{{home.roomName || "You are not currently in a chatroom"}}</h1>
           <div class="current-chat-room" ng-repeat="message in home.messages.all">
-            <p class="text-primary">{{message.username}} <span class="text-warning">: {{message.content}}</span></p>
+            <p class="text-primary">{{message.username}} <span style="color:black;">: {{message.content}}</span></p>
           </div>
           <section class="send-message">
               <input type="text" ng-model="value"/>

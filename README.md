@@ -6,4 +6,4 @@ Single Page Application real-time chatroom.
 Built with AngularJS and Firebase database.
 
 ### Screenshots
-![bloc-chat](https://user-images.githubusercontent.com/28276414/43360915-99263fea-9276-11e8-8048-d19785b6e079.png)
+![bloc-chat](https://user-images.githubusercontent.com/28276414/43361172-2b66d648-927d-11e8-9174-0170a0e3772a.png)

@@ -14,9 +14,12 @@ html, body {
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 1px 1px 2px 3px black;
+    overflow-y: auto;
+    background-color: peachpuff;
 }
 
 .chat-room-title {
+  margin-top: 0px;
   text-align: center;
   padding: 10px;
   border: 1px solid black;
@@ -26,7 +29,7 @@ html, body {
 }
 
 .rooms {
-  margin-top: 20px;
+  margin-top: 10px;
   padding: 10px;
   -webkit-transition: 0.2s ease-in;
   transition: 0.2s ease-in;
@@ -42,6 +45,7 @@ html, body {
 }
 
 .bloc-chat {
+  margin-top: 0px;
   background-color: black;
   color: white;
   padding: 10px;
@@ -55,6 +59,7 @@ html, body {
   position: absolute;
   bottom: 0;
   text-align: center;
+
 }
 
 .send-message input {
@@ -67,39 +72,18 @@ html, body {
   border-radius: 15px;
   box-shadow: 1px 1px 2px 3px black;
   overflow: hidden;
+  background-color: peachpuff;
 }
 
 .current-chat-room {
   margin-left: 20px;
   background-color: white;
   padding: 10px;
+  background-color: peachpuff;
 }
 
 
 .bloc-chat-container {
   margin-top: 20px;
   margin-bottom: 20px;
-}
-
-
-.fade.in {
-  opacity: 1;
-}
-.modal.in .modal-dialog {
-  -webkit-transform: translate(0, 0);
-  -o-transform: translate(0, 0);
-  transform: translate(0, 0);
-}
-
-.modal-backdrop .fade .in {
-  opacity: 0.5 !important;
-}
-
-
-.modal-backdrop.fade {
-    opacity: 0.5 !important;
-}
-
-.modal-backdrop {
-  z-index: -1;
 }
