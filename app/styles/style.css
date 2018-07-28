@@ -1,14 +1,74 @@
-.nav, .pagination, .carousel, .panel-title a {
+.nav, .pagination, .carousel, .panel-title a , .rooms {
     cursor: pointer;
 }
 
 .home {
-    height: 100%;
-    float: left;
-    background-color: lightgrey;
-    padding: 20px;
-    margin-right: 20px;
+    padding: 0px;
+    border: 1px solid black;
+    text-align: center;
+    height: 700px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 1px 1px 2px 3px black;
 }
+
+.chat-room-title {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid black;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+}
+
 .rooms {
-    cursor: pointer;
+  margin-top: 20px;
+  padding: 10px;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+  text-shadow: 1px 1px grey;
+  border-bottom: 2px solid black;
+}
+
+.rooms:hover {
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+}
+
+.bloc-chat {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  font-size: 18px;
+
+}
+
+.send-message {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.send-message input {
+  width: 500px;
+}
+
+.chatroom {
+  height: 700px;
+  border: 1px solid black;
+  border-radius: 15px;
+  box-shadow: 1px 1px 2px 3px black;
+  overflow: hidden;
+}
+
+.current-chat-room {
+  margin-left: 20px;
+  background-color: white;
+  padding: 10px;
+}
+
+
+.bloc-chat-container {
+  margin-top: 20px;
 }
