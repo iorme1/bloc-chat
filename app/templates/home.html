@@ -17,18 +17,13 @@
           <div class="current-chat-room" ng-repeat="message in home.messages.all">
             <p class="text-primary">{{message.username}} <span class="text-warning">: {{message.content}}</span></p>
           </div>
+          <section class="send-message">
+              <input type="text" ng-model="value"/>
+              <button class="btn btn-success" ng-click="home.messages.send(value)">Send</button>
+          </section>
       </section>
-      <section class="send-message">
-          <input type="text" ng-model="value"/>
-          <button class="btn btn-success" ng-click="home.messages.send(value)">Send</button>
-      </section>
+
     </div>
   </div>
-
-    <div class="row text-right">
-      <div class="col-md-12">
-
-      </div>
-    </div>
 
 </div>

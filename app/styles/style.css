@@ -1,3 +1,7 @@
+html, body {
+  min-height: 100%;
+}
+
 .nav, .pagination, .carousel, .panel-title a , .rooms {
     cursor: pointer;
 }
@@ -46,12 +50,15 @@
 }
 
 .send-message {
-  margin-top: 20px;
+  margin-left: 20px;
   margin-bottom: 20px;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
 }
 
 .send-message input {
-  width: 500px;
+  width: 300px;
 }
 
 .chatroom {
@@ -71,4 +78,28 @@
 
 .bloc-chat-container {
   margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+.fade.in {
+  opacity: 1;
+}
+.modal.in .modal-dialog {
+  -webkit-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+.modal-backdrop .fade .in {
+  opacity: 0.5 !important;
+}
+
+
+.modal-backdrop.fade {
+    opacity: 0.5 !important;
+}
+
+.modal-backdrop {
+  z-index: -1;
 }

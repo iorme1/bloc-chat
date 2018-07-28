@@ -9,7 +9,7 @@
       };
       this.chatRooms = Room;
 
-      this.openModal = function() {
+      this.openModal = function() {        
           $uibModal.open({
               controller: 'ModalCtrl',
               controllerAs: 'modal',
